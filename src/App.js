@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import HomePage from './pages/HomePage';
+import useDarkMode from './useDarkMode';
+import Header from './components/Header';
+import { Routes, Route } from 'react-router-dom';
+import NotFound from './pages/NotFound';
+import Categories from './pages/Categories';
+import BlogDetailView from './pages/BlogDetailView';
 
 function App() {
+  useDarkMode();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App dark:bg-[#0f172a] dark:text-white transition duration-500">
+      <div className='fixed z-10 w-full top-0 '>
+        <Header />
+      </div>
+     <Routes>
+      <Route path="/" element = { <HomePage/> } />
+      <Route path="/cat/:id" element = { <Categories/> } />
+      <Route path="/blog/:id" element = { <BlogDetailView/> } />
+      <Route path="*" element = { <NotFound/> } />
+
+     </Routes>
     </div>
   );
 }
