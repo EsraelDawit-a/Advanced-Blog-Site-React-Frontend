@@ -11,7 +11,7 @@ import BlogDetailView from './pages/BlogDetailView';
 function App() {
   useDarkMode();
   return (
-    <div className="App dark:bg-[#0f172a] dark:text-white transition duration-500">
+    <div className="App overflow-x-hidden dark:bg-[#0f172a] dark:text-white transition duration-500">
       <div className='fixed z-10 w-full top-0 '>
         <Header />
       </div>

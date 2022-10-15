@@ -12,11 +12,12 @@ export default function Categories() {
     return (
         <>
             {/* Background Image Layer */}
-            <div className="h-screen fixed  top-10 bottom-0 left-0 right-0" style={{
+            <div className=" -z-10 fixed  top-10 bottom-0 left-0 right-0" style={{
                 backgroundImage: "url('https://assets.website-files.com/5d04fc355b8916913bbf365a/5d04fc355b8916b7f2bf374f_tomasz-zagorski-1097343-unsplash.jpg')",
                 backgroundSize: 'cover',
-                backgroundPosition: "0px 0px, 50% 50%",
-                backgroundAttachment: "scroll, fixed"
+                backgroundPosition: "50% 50%, 50% 50%",
+                backgroundAttachment: "scroll, fixed",
+                height:"45%"
             }}>
                 <div className='relative top-0 right-0 left-0 bottom-0 bg-black w-full h-full opacity-[0.5] z-0'>
                 </div>
@@ -24,12 +25,12 @@ export default function Categories() {
             </div>
 
 
-            <div className="  absolute mt-10 h-screen w-full container">
-                <div className="flex justify-center mt-[35%] pb-10 ">
-                    <h1 className="font-bold text-5xl text-white">Culture Category</h1>
+            <div className="  mt-10  ">
+                <div className="mt-[35%] flex justify-center md:mt-[15%] pb-10 ">
+                    <h1 className="text-2xl font-bold md:text-5xl text-white">Culture Category</h1>
                 </div>
-
-                <div className="bg-white dark:bg-[#0f172a] dark:text-white w-screen  mt-20">
+                {/*  */}
+                <div className="bg-white  dark:bg-[#0f172a] dark:text-white   mt-20">
                     <div className="menues  dark:text-white pt-5 pl-5  text-sm gap-2 text-gray-800 flex justify-between w-fit">
                         <div>Home</div>
                         <div>/</div>
@@ -41,8 +42,8 @@ export default function Categories() {
 
 
                     <div className="content-list mb-10 flex flex-col lg:flex-row justify-between">
-                        <div className="flex-col lg:w-2/3">
-                             <Link to="/blog/dafafas" ><ListCard /></Link>
+                        <div className="flex-col items-end ">
+                            <Link to="/blog/dafafas" ><ListCard /></Link>
                             
                             <ListCard />
                             <ListCard />
@@ -52,7 +53,7 @@ export default function Categories() {
                         </div>
 
 
-                        <div className="choose-menues lg:w-2/5 px-10 mb-15 mt-10">
+                        <div className="choose-menues sm:mx-16 px-4 lg:w-3/5 md:px-1 mb-15 mt-10">
                             {/* Categoies */}
                             <div className="categories">
                                 <div className="header">
@@ -110,12 +111,12 @@ export default function Categories() {
                             <Tags/>
 
                             {/* Ads here */}
-                            <div className="adds mt-10 mb-10 h-[500px]">
+                            <div className="adds ml-5 md:ml-0 md:mx-auto mt-10 mb-10 h-[500px]">
                                 <a href="adad">
-                                    <div className=" h-full w-[370px]  lg:w-[370px]  bg-slate-500" style={{
+                                    <div className=" h-full w-[100%]  lg:w-[370px]  bg-slate-500" style={{
                                         backgroundImage: "url('https://assets.website-files.com/5d04fc355b8916913bbf365a/5d0b6dc92ddabc5fb7819703_banner-sidebar-p-500.jpeg')",
                                         backgroundSize: 'cover',
-                                        backgroundPosition: "0px 0px, 50% 50%",
+                                        
                                         
                                     }}></div>
                                 </a>
@@ -129,6 +130,7 @@ export default function Categories() {
                     <SocialBaner/>
 
                 </div>
+              
             </div>
 
 

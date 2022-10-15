@@ -5,7 +5,7 @@ import { BiTime } from 'react-icons/bi'
 
 function ListCard() {
     return (
-        <div className=' mt-14  sm:flex px-5 justify-between w-11/12 lg:w-4/5 my-4 overflow-x-hidden'>
+        <div className='mx-auto mt-14  sm:flex px-5 justify-between w-11/12  my-4 overflow-x-hidden'>
 
             <div className="img  relative w-[450px] rounded-md  hover:ease-in-out transition delay-150 h-[200px]  xl:hover:scale-[1.05]" style={{
                 backgroundImage: 'url("https://assets.website-files.com/5d04fc355b89160a98bf3697/5d08cdac95e837798a81058c_will-francis-1070259-unsplash-thumb.jpg")',
@@ -16,7 +16,7 @@ function ListCard() {
                 </a>
             </div>
 
-            <div className="content flex flex-col gap-1  ">
+            <div className="content lg:ml-5 sm:w-5/6 mt-3 flex flex-col gap-1  ">
                 <div className='mb-2'>
                     <h1 className='font-[600] text-black  dark:text-white mx-2 text-2xl mb-6 h-8 hover:underline'> Using 7 Marketing Strategies Like The Pros</h1>
 
