@@ -12,7 +12,7 @@ export default function Categories() {
     return (
         <>
             {/* Background Image Layer */}
-            <div className=" -z-10 fixed  top-10 bottom-0 left-0 right-0" style={{
+            <div className=" -z-10  fixed  top-10 bottom-0 left-0 right-0" style={{
                 backgroundImage: "url('https://assets.website-files.com/5d04fc355b8916913bbf365a/5d04fc355b8916b7f2bf374f_tomasz-zagorski-1097343-unsplash.jpg')",
                 backgroundSize: 'cover',
                 backgroundPosition: "50% 50%, 50% 50%",
@@ -30,7 +30,7 @@ export default function Categories() {
                     <h1 className="text-2xl font-bold md:text-5xl text-white">Culture Category</h1>
                 </div>
                 {/*  */}
-                <div className="bg-white  dark:bg-[#0f172a] dark:text-white   mt-20">
+                <div className="bg-white  dark:bg-[#0f172a]  dark:text-white   mt-20">
                     <div className="menues  dark:text-white pt-5 pl-5  text-sm gap-2 text-gray-800 flex justify-between w-fit">
                         <div>Home</div>
                         <div>/</div>

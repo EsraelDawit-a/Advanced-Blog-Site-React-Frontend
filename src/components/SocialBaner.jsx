@@ -4,7 +4,7 @@ import { BsTwitter, BsFacebook, BsYoutube, BsInstagram, BsTypeItalic } from 'rea
 function SocialBaner() {
     return (
         <div className="container mx-0 md:mx-auto md:w-full pb-16">
-            <div className="socia-icons py-8 mx-5 sm:mx-10 flex rounded-lg  bg-gray-300 justify-evenly jus cursor-pointer ">
+            <div className="socia-icons py-8 mx-5 sm:mx-10 flex rounded-lg  bg-[#f6f6f6] justify-evenly jus cursor-pointer ">
                 <div className="flex items-center font-semibold">
                     <div className="bg-white  rounded-full m-3 p-5">
                         <BsTwitter className="text-lg dark:text-black" />
