@@ -2,21 +2,35 @@ import React from 'react'
 import { useState, useEffect, useParams } from 'react'
 import axios from 'axios'
 import { BsPerson } from 'react-icons/bs'
-import { FiCalendar } from 'react-icons/fi'
+import { FiCalendar,FiCopy } from 'react-icons/fi'
+// import { MdContentPaste } from 'react-icons/md'
 import { BiTime } from 'react-icons/bi'
-import md from'./sample.markdown'
+// import ReactMarkdown from 'react-markdown'
+import Code from '../components/Code'
+import Markdown from 'markdown-to-jsx'
+
+
+import MarkdownEditor from '@uiw/react-markdown-editor';
+
+
 
 function BlogDetailView() {
   const [detail, SetDetail] = useState([])
+  const [data, SetData] = useState()
+  const [markdown, setMarkdown] = useState("");
+
 
   const getPost = () => {
-    const url = "http://localhost:8181/posts/";
+    const url = "http://localhost:8000/api/post-detail/2/";
 
     axios.get(url).then(
       (response) => {
-        console.log(response.data)
+       SetData(response.data.content)
+       console.log(data)
       }
-    )
+    ).catch(err=>{
+      console.log(err)
+    })
 
   }
 
@@ -58,43 +72,51 @@ function BlogDetailView() {
       </div>
 
 
+
+
+{/* editor */}
+<div className='flex justify-center'>
+          
+          {/* <button onClick={()=>getPost()}>load</button> */}
+       
+         
+
+
+          {/* <Editor style={{ height: '500px' }} renderHTML={text => mdParser.render(text)} onChange={handleEditorChange} /> */}
+       
+        </div>
       
 
      {/* Markdown */}
-     <div className="mt-10 mark prose prose-stone prose-a:text-green-400 hover:prose-a:text-indigo-500 prose-headings:text-indigo-500 text-stone dark:prose-invert">
+     <div   className="mt-10  mark prose prose-stone prose-a:text-green-400 hover:prose-a:text-indigo-500 prose-headings:text-indigo-500 text-stone dark:prose-invert">
+        {/* <ReactMarkdown children={data}/> */}
+        
+      {/* */}
 
-      <h2>What’s a Rich Text element?</h2>
-          <p>
-     The rich text element allows you to create and format headings, 
-     paragraphs, blockquotes, images, and video all in one place instead of 
-     having to add and format them individually. Just double-click and easily create content.
-      <br />
-      <a href="#">Download source code here.</a>
-     </p>
-     
-     <h4>Static and dynamic content editing</h4>
-     
-     <p> A rich text element can be used with static or dynamic content. 
-     For static content, just drop it into any page and begin editing. For dynamic content, add a rich 
-     text field to any collection and then connect a rich text element to that field in the settings panel. 
-     Voila!</p>
-     <blockquote>
-      solve the code before you write!
-     </blockquote>
-     <pre>
-      <code>
-        for i in range(10):
-            print("jkjdakd")
-      </code>
-     </pre>
+      {/* <MarkdownEditor.Markdown  source={markdown} /> */}
+      <Markdown options = {{
+        overrides:{
+          Code:{
+            component:Code,
+            // props:{
+            //   language:"jsx"
+            // }
+            
+          },
 
- <h4>How to customize formatting for each rich text</h4>
- <p> Headings, paragraphs, blockquotes, figures, images, 
-     and figure captions can all be styled after a class is added to the rich text element using the 
-     "When inside of" nested selector system.</p>
+          code:{
+            component:Code,
+           
+          }
+        }
+      }}> 
+         {markdown}
+        </Markdown>
+
 
      
      </div>
+
     </div>
   )
 }

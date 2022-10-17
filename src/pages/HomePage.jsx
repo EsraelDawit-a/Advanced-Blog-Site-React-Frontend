@@ -59,10 +59,10 @@ function HomePage() {
     return (
         <div className='flex flex-col items-center '>
 
-
-          
-            <Slider autoplay={2000} touchDisabled={false}  >
-                {content.map((item, index) => (
+                <Slider>
+                
+                { 
+                content.map((item, index) => 
 
                     <div className=''
                         key={index}
@@ -81,7 +81,9 @@ function HomePage() {
                             </div>
                         </div>
                     </div>
-                ))}
+
+                )}
+              
             </Slider>
             {/* Suggestion Posts */}
 

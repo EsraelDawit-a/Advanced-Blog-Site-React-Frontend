@@ -15,7 +15,7 @@ function Header() {
     const [colorTheme, setTheme] = useDarkMode();
 
     return (
-        <div className='flex flex-col   bg-white w-full dark:bg-[#1e293b] dark:text-white'>
+        <div className='flex flex-col z-100   bg-white w-full dark:bg-[#1e293b] dark:text-white'>
             <div className='flex h-[60px] justify-around items-center cursor-pointer'>
                 <div className='flex  items-center gap-2 group'>
                     <div className="bg-green-500 w-10 h-10 flex items-center justify-center rounded-3xl">
