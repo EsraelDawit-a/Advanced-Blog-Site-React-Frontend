@@ -31,8 +31,8 @@ function Header() {
                     <div className="hidden md:flex justify-between gap-8 navs text-[15px] font-semibold  z-50">
                         <div>Intro</div>
                         <div><Link to="/"> Home </Link></div>
-                        <div><Link to="/cat"> Categories </Link></div>
-                        <div>pages</div>
+                        <div><Link to="/cat"> Posts </Link></div>
+                        <div>Sign in</div>
                     </div>
 
 

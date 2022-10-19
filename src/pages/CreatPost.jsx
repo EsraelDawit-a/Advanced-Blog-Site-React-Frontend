@@ -32,8 +32,9 @@ function CreatPost() {
       onChange={(value, viewUpdate) => setMarkdown(value)}
     />
       {/* */}
-      
-      <Markdown className=" prose prose-li:marker:text-green-400  dark:prose-li:marker:text-white  prose-headings:underline prose-md md:prose-lg lg:prose-xl dark:prose-invert dark:prose-a:text-green-300 prose-headings:text-indigo-400 prose-a:text-indigo-500 prose-a:hover:text-indigo-700  prose-zinc prose-pre:bg-transparent" options = {{
+      <div className="flex justify-center">
+
+      <Markdown className="mx-auto break-words w-11/12 prose prose-li:marker:text-green-400 prose-blockquote:  dark:prose-li:marker:text-white  prose-headings:underline prose-md md:prose-lg lg:prose-xl dark:prose-invert dark:prose-a:text-green-300 prose-headings:text-indigo-400 prose-a:text-indigo-500 prose-a:hover:text-indigo-700  prose-zinc prose-pre:bg-transparent" options = {{
         overrides:{
           Code:{
             component:Code,
@@ -51,6 +52,9 @@ function CreatPost() {
       }}> 
          {markdown}
         </Markdown>
+
+      </div>
+   
     </div>
   )
 }

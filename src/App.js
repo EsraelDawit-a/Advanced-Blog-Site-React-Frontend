@@ -8,6 +8,7 @@ import NotFound from './pages/NotFound';
 import Categories from './pages/Categories';
 import BlogDetailView from './pages/BlogDetailView';
 import CreatPost from './pages/CreatPost';
+import SignUp from './pages/auth/SignUp';
 
 function App() {
   useDarkMode();
@@ -21,6 +22,7 @@ function App() {
       <Route path="/cat/:id" element = { <Categories/> } />
       <Route path="/blog/:id" element = { <BlogDetailView/> } />
       <Route path="/create-post" element = { <CreatPost/> } />
+      <Route path="/auth" element = { <SignUp/> } />
       
       <Route path="*" element = { <NotFound/> } />
 
