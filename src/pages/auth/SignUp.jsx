@@ -2,13 +2,18 @@ import React from 'react'
 
 function SignUp() {
   return (
-    <div className='bg-gradient-to-r from-green-300 via-slate-300  to-green-500 h-screen m-0 p-0'>
+    <div className='bg-gradient-to-r from-green-300 via-slate-300  to-green-500 h-screen m-0 p-0'
+      style={{
+        'background':"url('https://github.com/EsraelDawit-a/Advanced-Blog-Site-React-Frontend/blob/master/src/assets/wave.jpg?raw=true')  no-repeat center",
+        'backgroundSize':"cover"
+      }}
+    >
     <div className=' flex justify-center md:w-3/5 mx-auto pt-[150px]'>
 
         <div className=" card w-[500px] flex-col items-center justify-center">
           <h3 className='text-lg flex justify-center md:text-2xl'>
-            <span className="text-green-400 mx-2 font-bold">Reader</span>  
-            create your account</h3>
+            <span className="text-green-600 mx-2 font-bold">Reader</span>  
+            <span className=' text-slate-600 font-semibold'>Create your account</span></h3>
              
              
 
